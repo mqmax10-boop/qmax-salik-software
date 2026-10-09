@@ -10,7 +10,7 @@
 <script>
 // ضع Publishable key العامة من Supabase هنا. لا تستخدم secret أو service_role key.
 const SUPABASE_URL='https://gcaugfjrpyfzwhzkbxtw.supabase.co';
-const SUPABASE_KEY='PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE';
+const SUPABASE_KEY='sb_publishable_go0cIktl1AHW-d1H2h3egA_68VtjZ9D';
 const cards=document.getElementById('cards'),statusEl=document.getElementById('status');let models=[];
 function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function urlLink(url,label){if(!url)return '';try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))return '';return `<a href="${esc(u.href)}" target="_blank" rel="noopener noreferrer">${label}</a>`}catch{return ''}}
