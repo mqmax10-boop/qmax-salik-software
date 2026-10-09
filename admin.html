@@ -7,11 +7,11 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
 // استخدم Publishable key العامة فقط. لا تضع secret أو service_role key في ملفات الموقع.
 const SUPABASE_URL='https://gcaugfjrpyfzwhzkbxtw.supabase.co';
-const SUPABASE_KEY='PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE';
+const SUPABASE_KEY='sb_publishable_go0cIktl1AHW-d1H2h3egA_68VtjZ9D';
 const message=document.getElementById('message');let sb=null;
 function say(s){message.textContent=s}
 function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function init(){if(SUPABASE_KEY.includes('PASTE_YOUR')){say('قبل الاستخدام: افتح admin.html وindex.html وابحث عن PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE واستبدله بالمفتاح Publishable العام من Supabase.');document.getElementById('loginBtn').disabled=true;return false}if(!window.supabase){say('تعذر تحميل مكتبة Supabase. تحقق من الاتصال بالإنترنت.');return false}sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);return true}
+function init(){if(SUPABASE_KEY.includes('PASTE_YOUR')){say('قبل الاستخدام: افتح admin.html وindex.html وابحث عن sb_publishable_go0cIktl1AHW-d1H2h3egA_68VtjZ9D واستبدله بالمفتاح Publishable العام من Supabase.');document.getElementById('loginBtn').disabled=true;return false}if(!window.supabase){say('تعذر تحميل مكتبة Supabase. تحقق من الاتصال بالإنترنت.');return false}sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);return true}
 function formData(){return {name:document.getElementById('name').value.trim(),category:document.getElementById('category').value,description:document.getElementById('description').value.trim(),image_url:document.getElementById('image_url').value.trim(),flash_link:document.getElementById('flash_link').value.trim(),dump_link:document.getElementById('dump_link').value.trim(),loader_link:document.getElementById('loader_link').value.trim(),published:document.getElementById('published').checked}}
 function resetForm(){document.getElementById('modelForm').reset();document.getElementById('modelId').value='';document.getElementById('published').checked=true;document.getElementById('formTitle').textContent='إضافة موديل'}
 async function showApp(){document.getElementById('loginBox').classList.add('hidden');document.getElementById('app').classList.remove('hidden');await loadModels()}
